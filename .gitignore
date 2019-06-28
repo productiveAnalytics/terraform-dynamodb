@@ -7,3 +7,6 @@
 
 # .tfvars files
 *.tfvars
+
+# Local AWS init scripts (Secrets)
+init_aws_secrets_local.sh

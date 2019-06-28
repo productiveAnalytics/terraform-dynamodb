@@ -5,6 +5,8 @@ resource "aws_dynamodb_table" "test-dynamodb-table" {
   write_capacity = 20
   hash_key       = "UserId"
   range_key      = "GameTitle"
+  stream_enabled = true
+  stream_view_type = "NEW_AND_OLD_IMAGES"
 
   attribute {
     name = "UserId"

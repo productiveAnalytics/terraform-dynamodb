@@ -10,7 +10,13 @@ Create DynamoDB table "hds-terraform-ldc-lock" with hash key "LockID"
 
 2. terraform init
 
-3. terraform plan  
-   Or with debug: TF_LOG=DEBUG terraform plan
+3. terraform plan
+   Or with debug: TF_LOG=DEBUG terraform plan -out tf_plan.out 
 
-4. 
+4. terraform apply 
+   Or terraform apply "tf_plan.out"
+
+5. terraform destroy
+
+6. To import resource NOT-managed by TF into TF state:
+   terraform import aws_dynamodb_table.test-dynamodb-table hds-GameScores-tf-test

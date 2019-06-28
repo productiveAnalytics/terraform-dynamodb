@@ -8,5 +8,8 @@
 # .tfvars files
 *.tfvars
 
+# My output of TF plan
+tf_plan.out
+
 # Local AWS init scripts (Secrets)
 init_aws_secrets_local.sh

@@ -21,6 +21,11 @@ resource "aws_dynamodb_table" "test-dynamodb-table" {
     type = "N"
   }
 
+  ttl {
+    attribute_name = "TTL"
+    enabled = true
+  }
+
   global_secondary_index {
     name               = "GameTitleIndex"
     hash_key           = "GameTitle"

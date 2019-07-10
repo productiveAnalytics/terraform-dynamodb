@@ -7,6 +7,8 @@ Create DynamoDB table "hds-terraform-ldc-lock" with hash key "LockID"
       export TF_VAR_aws_secret_access_key=<aws_secret_access_key-goes-here>
     Or
       terraform -var 'variable=value'
+    Or
+      terraform -var-file="./dev/tf.tfvars"
 
 2. terraform init
 

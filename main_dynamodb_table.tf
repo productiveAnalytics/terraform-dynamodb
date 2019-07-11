@@ -1,8 +1,8 @@
 resource "aws_dynamodb_table" "test-dynamodb-table" {
   name           = "hds-GameScores-tf-test"
   billing_mode   = "PROVISIONED"
-  read_capacity  = 20
-  write_capacity = 20
+  read_capacity  = 5
+  write_capacity = 5
   hash_key       = "UserId"
   range_key      = "GameTitle"
   stream_enabled = true
@@ -32,8 +32,8 @@ resource "aws_dynamodb_table" "test-dynamodb-table" {
     name               = "GameTitleIndex"
     hash_key           = "GameTitle"
     range_key          = "TopScore"
-    write_capacity     = 10
-    read_capacity      = 10
+    write_capacity     = 5
+    read_capacity      = 5
     projection_type    = "INCLUDE"
     non_key_attributes = ["UserId"]
   }
